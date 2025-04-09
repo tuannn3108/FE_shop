@@ -1,0 +1,63 @@
+@import '@/style/reponsive';
+
+.heroShop {
+    background-image: url("/src/assets//img/bannerShop.png");
+    position: relative;
+    height: 360px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    background-size: 100%;
+    margin-top: 60px;
+
+    @include respond-to(mobile) {
+        height: 132px;
+
+    }
+
+    .content {
+
+        max-width: 413px;
+        margin: auto auto;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+
+        h2 {
+            margin-bottom: 10px;
+            font-weight: 700;
+            font-size: 54px;
+
+            @include respond-to(tablet) {
+                font-size: 32px;
+            }
+
+            @include respond-to(mobile) {
+                font-size: 24px;
+            }
+        }
+        p{
+            @include respond-to(mobile) {
+                font-size: 14px;
+                
+            }
+        }
+    }
+
+
+    
+}
+.mainProdut {
+    margin-top: 2rem;
+
+    .toolBar{
+        display: flex;
+        gap: 20px;
+        max-width: 600px;
+        width: 100%;
+        flex: 1;
+    }
+}

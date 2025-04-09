@@ -1,0 +1,38 @@
+@import "@/style/reponsive";
+
+.item {
+    width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e3e8ea;
+
+    @include respond-to(mobile) {
+        gap: 2px;
+    }
+    .titleInfo {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        font-weight: 500;
+        white-space: nowrap;
+        min-width: 9rem;
+        width: 24rem;
+        @include respond-to(mobile) {
+            width: 0;
+
+        }
+        img {
+            height: 72px;
+            width: 72px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    }
+
+    .price {
+        font-weight: 700;
+        font-size: 16px;
+    }
+}

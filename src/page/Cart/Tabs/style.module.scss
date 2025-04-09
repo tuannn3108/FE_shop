@@ -1,0 +1,70 @@
+@import "@/style/reponsive";
+
+.tabs {
+    margin: 2rem auto;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+
+    @include respond-to(mobile) {
+        margin: 1rem auto;
+        gap: 2px;
+
+    }
+
+    .tabItem {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 2rem;
+        opacity: .3;
+        gap: 12px;
+
+        @include respond-to(mobile) {
+            padding-bottom: 1rem;
+            font-size: 14px;
+            gap: 4px;
+
+        }
+
+        .process {
+            border-radius: 9999px;
+            height: 42px;
+            width: 42px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            color: white;
+            font-weight: 600;
+
+
+            @include respond-to(mobile) {
+                height: 30px;
+                width: 30px;
+            }
+        }
+
+        .title {
+            font-weight: 600;
+        }
+
+        .processActive {
+            background-color: #38CB89;
+            color: white;
+
+        }
+    }
+
+    .tabItemActive {
+        opacity: 1;
+        border-bottom: 2px solid black;
+    }
+
+    .tabComplete {
+        opacity: 1;
+        border-bottom: 2px solid #38CB89;
+        color: #38CB89
+    }
+}

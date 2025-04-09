@@ -1,0 +1,12 @@
+@import "@/style/reponsive";
+
+.gridItem {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    gap: 12px 42px;
+    
+    @include respond-to(mobile) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px
+    }
+}

@@ -1,0 +1,99 @@
+@import '@/style/reponsive';
+
+.menuMobile {
+    position: fixed;
+    height: 100vh;
+    width: 80%;
+    background-color: whitesmoke;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    padding: 40px 1rem;
+    z-index: 1000;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(100%); /* Initially hidden */
+
+    .headerMobile {
+        display: flex;
+        // flex-flow: column wrap;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        width: 100%;
+        border-bottom: 1px solid #e3e8ea;
+        ;
+
+        .logo {
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .btnClose {
+            padding: 4px;
+            border: 1px solid #e3e8ea;
+            border-radius: 6px;
+        }
+
+
+        
+
+    }
+
+    .navLink {
+        margin-top: 12px;
+        ul {
+            padding-left: 10px;
+            li {
+                padding: 12px 0;
+                font-weight: 500;
+                font-size: 16px;
+            }
+        }
+    }
+
+    .LoginMobile{
+        margin-top: 12px;
+        padding-bottom: 24px;
+
+        .btnLogin{
+            width: 100%;
+            height: 40px;
+            color: white;
+            background-color: #141718;
+            border-radius: 0.5rem;
+        }
+    }
+
+    .controlBottom{
+        padding-top: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:8px;
+        border-top: 1px solid #e3e8ea;
+
+        .btnShopping {
+            position: relative;
+
+            .totalCart {
+                position: absolute;
+                border-radius: 99999px;
+                background: #121212;
+                font-size: 12px;
+                height: 18px;
+                width: 18px;
+                color: #c4c9cb;
+                font-weight: 800;
+                top: -4px;
+                right: -7px;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+
+.menuMobileOpen {
+    transform: translateX(0); /* Slide in */
+}

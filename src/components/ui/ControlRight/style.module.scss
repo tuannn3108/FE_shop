@@ -1,0 +1,41 @@
+@import '@/style/reponsive';
+
+
+
+.btnShopping {
+    position: relative;
+
+    .totalCart {
+        position: absolute;
+        border-radius: 99999px;
+        background: #121212;
+        font-size: 12px;
+        height: 18px;
+        width: 18px;
+        color: #c4c9cb;
+        font-weight: 800;
+        top: -4px;
+        right: -7px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+
+.hideOnMobile {
+    &:hover {
+        opacity: 0.75;
+    }
+
+    @include respond-to(mobile) {
+        display: none;
+    }
+
+}
+
+.btnBar {
+    @include respond-to(mobile) {
+        display: block;
+    }
+}

@@ -1,0 +1,158 @@
+@import "@/style/variable";
+
+.card {
+    width: 100%;
+    display: block;
+    max-width: 300px;
+    height: 380px;
+    position: relative;
+
+    .cardImage {
+        width: 100%;
+        height: 280px;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        border-radius: 10px;
+
+        &:hover {
+            filter: brightness(.95);
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+
+
+
+
+        .btnTop {
+            position: absolute;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            top: -40px;
+            transition: all 0.3s;
+
+            .btnNew,
+            .btnHeart {
+                background-color: white;
+                border: none;
+                cursor: pointer;
+                transition: all 0.3s;
+
+                &:hover {
+                    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+                    transform: translateY(-2px);
+                    opacity: 0.7;
+
+                }
+
+            }
+
+
+
+
+
+
+
+            .btnHeart {
+                border-radius: 9999px;
+                padding: 6px;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            }
+
+            .btnNew {
+                border-radius: 10px;
+                padding: 0 6px;
+                font-size: 12px;
+                font-weight: 600;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            }
+
+
+
+        }
+
+
+        .btnAddToCart {
+            border-radius: 12px;
+            position: absolute;
+            bottom: -40px;
+            padding: 8px 12px;
+            font-weight: 600;
+            font-size: 12px;
+            margin: 0 auto;
+            width: 80%;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: all 0.3s;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .btnAddToCart {
+            box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+        }
+
+        .btnAddToCart:hover {
+            box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+        }
+
+        .btnAddToCart:active {
+            box-shadow: #D6D6E7 0 3px 7px inset;
+        }
+
+        &:hover .btnAddToCart {
+            bottom: 20px;
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+        }
+
+        &:hover .btnTop {
+            top: 10px;
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+
+        }
+
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .cardTitle {
+        font-weight: 600;
+        margin-top: 4px;
+
+        .star {
+            display: flex;
+            gap: 1px;
+            margin-top: 10px;
+        }
+
+        a {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            &:hover {
+                color: rgb(183, 207, 230)
+            }
+        }
+
+        span {
+            color: $text-gray;
+        }
+    }
+}

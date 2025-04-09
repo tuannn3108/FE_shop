@@ -1,0 +1,9 @@
+.heroSection{
+    width: 100%;
+    height: calc(100vh - 40px);
+    background-image: url('/src/assets/img/hero.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}

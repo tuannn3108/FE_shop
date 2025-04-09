@@ -1,0 +1,67 @@
+@import "@/style/reponsive";
+
+.MyAccount {
+    margin-top: 60px;
+    margin-bottom: 60px;
+   
+
+    .title {
+        text-align: center;
+        font-size: 46px;
+        font-weight: 800;
+
+        @include respond-to(mobile) {
+            font-size: 24px;
+        }
+    }
+
+    .wrapper{
+        display: flex;
+        margin-top: 2rem;
+
+        @include respond-to(mobile) {
+            flex-direction: column;
+        }
+        .tabsList{
+            max-width: 262px;
+            width: 100%;
+            border-radius: 8px;
+            padding: 3rem 1rem;
+            display: flex;
+            flex-direction: column;
+            background-color: #F3F5F7;
+            margin-right: 72px;
+            @include respond-to(mobile) {
+                margin-right: 0;
+                max-width: 100%;
+                margin-bottom: 12px;
+
+
+            }
+            .avata{
+                h2{
+                    text-align: center;
+                    font-weight: 600;
+                    margin-top: 0.75rem;
+                }
+            }
+
+            .navItem{
+                margin-top: 2rem;
+                
+                li{
+                    padding: 0.75rem 0;
+                    cursor: pointer;
+                    font-weight: 500;
+                    color: #6C7275;
+                     border-bottom: 0px solid ;
+
+                }
+                .activeTab{
+                    color: black;
+                    border-bottom: 2px solid black ;
+                }
+            }
+        }
+    }
+}

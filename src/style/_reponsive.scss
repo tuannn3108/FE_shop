@@ -1,0 +1,26 @@
+$mobile-width: 480px;
+$phone-width: 620px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == mobile {
+        @media (max-width: $mobile-width) {
+            @content;
+        }
+    } @else if $breakpoint == phone {
+        @media (min-width: $mobile-width) and (max-width: $phone-width) {
+            @content;
+        }
+    } @else if $breakpoint == tablet {
+        @media (max-width: $tablet-width) {
+            @content;
+        }
+    } @else if $breakpoint == desktop {
+        @media (max-width: $desktop-width) {
+            @content;
+        }
+    } @else {
+        @warn "Unknown breakpoint: #{$breakpoint}";
+    }
+}

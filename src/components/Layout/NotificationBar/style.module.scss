@@ -1,0 +1,33 @@
+@import '@/style/reponsive';
+
+
+.NotificationBar{
+    height: 40px;
+    background-color: #F3F5F7;
+    position: relative;
+    display: flex;
+    color: black;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        font-weight: 500;
+
+    }
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        gap: 10px;
+    }
+    span {
+        margin-left: 10px;
+        color: #376bdb;
+        text-decoration: underline;
+       
+    }
+
+    @include respond-to(mobile) {
+        font-size: 12px;
+    }
+}

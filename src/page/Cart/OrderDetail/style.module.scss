@@ -1,0 +1,47 @@
+.orderSucess {
+    width: 700px;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 1rem auto;
+
+    .content {
+        text-align: center;
+
+        // p {
+        //     color: gray;
+        //     font-size: 18px;
+        // }
+
+        h1 {
+            font-weight: 500;
+            font-size: 32px;
+        }
+
+        .orderDetail {
+            display: flex;
+            font-size: 14px;
+            text-align: start;
+            gap: 2rem;
+            margin-top: 2rem;
+            justify-content: center;
+        }
+
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            /* Centers the button horizontally */
+            align-items: center;
+            /* Centers the button vertically */
+            margin: 2rem auto 0 auto;
+            width: 320px;
+
+            button {
+                width: 100%;
+            }
+        }
+    }
+}
