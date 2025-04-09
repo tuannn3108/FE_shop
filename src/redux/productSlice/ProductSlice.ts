@@ -12,7 +12,7 @@ export const getAllproducts = createAsyncThunk(
   "product/getAll",
   async (_, { rejectWithValue }) => {
     try {
-      const response = await sanphamApi.getAll();
+      const response = await sanphamApi.getAll({page: 1, limit: 10000});
       if (response && response.data) {
         return response.data.data.data;
       } else {

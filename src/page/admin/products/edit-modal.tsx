@@ -41,12 +41,7 @@ const EditModal = ({ onClose, product }: Props) => {
 
   const handleFinish = async (values: any) => {
     try {
-      const updatedValues = {
-        ...values,
-        categoryName: values.categoryName,
-      };
-      console.log("🚀 ~ handleFinish ~ updatedValues:", updatedValues);
-      await sanphamApi.update(product._id, updatedValues);
+      await sanphamApi.update(product._id, values);
 
       notification.success({
         message: "Product Updated",
@@ -108,13 +103,13 @@ const EditModal = ({ onClose, product }: Props) => {
 
         <Form.Item
           label="Category"
-          name="categoryName"
+          name="categoryId"
           rules={[{ required: true, message: "Please select a category!" }]}>
           <Select
             placeholder="Select a category"
             loading={loading}
             options={categories.map((category) => ({
-              value: category.name,
+              value: category._id,
               label: category.name,
             }))}
           />

@@ -95,7 +95,7 @@ const AddProductModal: React.FC<Props> = ({ onClose }) => {
 
         <Form.Item
           label="Category"
-          name="categoryName"
+          name="categoryId"
           rules={[{ required: true, message: "Please select a category!" }]}>
           <Select
             placeholder="Select a category"
